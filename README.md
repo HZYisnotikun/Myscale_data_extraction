@@ -2,7 +2,7 @@ This file describes how to extract useful data from Myscale vector database.
 
 #### Create your conda environment for Myscale database
 
-To create a Conda environment with Python 3.10 and install dependencies using the `requirements.txt` file, follow these steps:
+To create a conda environment with Python 3.10 and install dependencies using the `requirements.txt` file, follow these steps:
 
 Creating a Conda Environment
 
@@ -13,7 +13,7 @@ conda create -n {your_env_name} python=3.10
 Activating the Environment
 
 ```bash
-conda activate {your_envs_name}
+conda activate {your_env_name}
 ```
 
 Installing Dependencies from requirements.txt
