@@ -71,6 +71,11 @@ python create_or_update_vectordb.py [action] [arguments]
    - **Description**: Whether to embed inputs online or not (i.e., calculate vectors on-the-fly).
    - **Example**: `--online_embedding=True`
 
+9. **`--clip_path`**:
+   - **Default**: `None`
+   - **Description**: Path to the CLIP model and processor.
+   - **Example**: `--clip_path=./clip/models/ViT-B-32/`
+
 9. **`--vector_file`**:
    - **Default**: `None`
    - **Description**: The file path storing vectors (required if `--online_embedding` is `False`).
@@ -240,7 +245,7 @@ python extract_data.py \
 ```
 
 ##### Notes:
-- The `--dataset_path` parameter is required when `--online_embedding=True`.
+- The `--dataset_path` and `--clip_model` parameter is required when `--online_embedding=True`.
 - The `--vector_file` and `--image_path_file` parameters are required when `--online_embedding=False`.
 - The `--density_threshold` parameter is used with the `deduplicated_adaptive` query method to control the search density.
 
