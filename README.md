@@ -116,6 +116,7 @@ python create_or_update_vectordb.py create \
     --vector_db_name=my_vector_db \
     --device=cuda \
     --dataset_path=/path/to/your/images \
+    --clip_model=/path/to/your/model \
     --online_embedding=True \
     --index_type=FLAT \
     --metric_type=Cosine
@@ -130,8 +131,8 @@ python create_or_update_vectordb.py create \
     --host=localhost \
     --port=9000 \
     --vector_db_name=my_vector_db \
-    --vector_file=/path/to/vectors.npy \
-    --image_path_file=/path/to/image_paths.txt \
+    --vector_file=/path/to/vectors.pkl \
+    --image_path_file=/path/to/image_paths.pkl \
     --online_embedding=False \
     --index_type=FLAT \
     --metric_type=Cosine
@@ -148,6 +149,7 @@ python create_or_update_vectordb.py update \
     --vector_db_name=my_vector_db \
     --device=cuda \
     --dataset_path=/path/to/new_images \
+    --clip_path=/path/to/your/model \
     --online_embedding=True \
     --index_type=FLAT \
     --metric_type=Cosine
@@ -162,8 +164,8 @@ python create_or_update_vectordb.py update \
     --host=localhost \
     --port=9000 \
     --vector_db_name=my_vector_db \
-    --vector_file=/path/to/new_vectors.npy \
-    --image_path_file=/path/to/new_image_paths.txt \
+    --vector_file=/path/to/new_vectors.pkl \
+    --image_path_file=/path/to/new_image_paths.pkl \
     --online_embedding=False \
     --index_type=FLAT \
     --metric_type=Cosine
@@ -221,6 +223,7 @@ python extract_data.py \
     --vector_db_name=my_vector_db \
     --online_embedding=True \
     --dataset_path=/path/to/images \
+    --clip_path=/path/to/your/model \
     --query_method=deduplicated \
     --query_num=100 \
     --k=100 \
@@ -235,8 +238,8 @@ python extract_data.py \
     --port=9000 \
     --vector_db_name=my_vector_db \
     --online_embedding=False \
-    --vector_file=/path/to/vectors.npy \
-    --image_path_file=/path/to/image_paths.txt \
+    --vector_file=/path/to/vectors.pkl \
+    --image_path_file=/path/to/image_paths.pkl \
     --query_method=deduplicated_adaptive \
     --query_num=100 \
     --k=100 \
@@ -244,7 +247,7 @@ python extract_data.py \
     --result_file_name="results/offline_query_results.json"
 ```
 
-##### Notes:
+#### Notes:
 - The `--dataset_path` and `--clip_model` parameter is required when `--online_embedding=True`.
 - The `--vector_file` and `--image_path_file` parameters are required when `--online_embedding=False`.
 - The `--density_threshold` parameter is used with the `deduplicated_adaptive` query method to control the search density.
