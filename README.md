@@ -176,7 +176,7 @@ python extract_data.py [arguments]
 
 1. **`--query_method`**:
    - **Choices**: `deduplicated` or `deduplicated_adaptive`
-   - **Description**: The method used to query the database. 
+   - **Description**: The method used to query the database. The difference between this two is explained at the end of this instruction.
    - **Example**: `--query_method=deduplicated`
 2. **`--query_num`**:
    - **Default**: `50`
