@@ -1,0 +1,5 @@
+clickhouse-driver=0.2.9
+packaging=24.2
+torch=2.6.0
+torchvision=0.21.0
+transformers=4.49.0
