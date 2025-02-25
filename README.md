@@ -13,7 +13,7 @@ conda create -n {your_env_name} python=3.10
 Activating the Environment
 
 ```bash
-conda activate {your_env_name}
+conda activate {your_envs_name}
 ```
 
 Installing Dependencies from requirements.txt
